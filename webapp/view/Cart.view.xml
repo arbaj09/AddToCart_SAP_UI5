@@ -1,0 +1,15 @@
+<mvc:View
+    controllerName="sap.ui.demo.fcl.controller.Cart"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Page title="Shopping Cart">
+        <content>
+            <List id="cartList" items="{cartModel>/cartItems}">
+                <StandardListItem
+                    title="{cartModel>name}"
+                    description="Quantity: {cartModel>quantity}"
+                    info="{cartModel>Price} {cartModel>CurrencyCode}" />
+            </List>
+        </content>
+    </Page>
+</mvc:View>
