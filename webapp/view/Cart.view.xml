@@ -2,6 +2,7 @@
     controllerName="sap.ui.demo.fcl.controller.Cart"
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc">
+
     <Page title="Shopping Cart">
         <content>
             <List id="cartList" items="{cartModel>/cartItems}">
@@ -11,5 +12,24 @@
                     info="{cartModel>Price} {cartModel>CurrencyCode}" />
             </List>
         </content>
+
+     
+            <!-- Total Price in Bottom Footer -->
+        <footer>
+            <Toolbar>
+             
+                <Label text="Total Price:" design="Bold" />
+                <ObjectNumber
+                    number="{cartModel>/totalPrice}"
+                    unit="USD"
+                    emphasized="true"
+                    class="sapUiSmallMarginBegin" />
+                <ToolbarSpacer /> <!-- Optional: to center it or balance space -->
+
+                <Button text="Proceed"></Button>
+            </Toolbar>
+            
+        </footer>
+        
     </Page>
 </mvc:View>

@@ -21,7 +21,7 @@
 				"sap.m": {},
 				"sap.ui.core": {},
 				"sap.uxap": {}
-				}
+			}
 		},
 		"config": {
 			"fullWidth": true
@@ -34,36 +34,24 @@
 				"path": "sap.ui.demo.fcl.view",
 				"controlId": "flexibleColumnLayout",
 				"transition": "slide",
-				"bypassed": {
-				},
 				"async": true
 			},
 			"routes": [
 				{
 					"pattern": ":layout:",
 					"name": "list",
-					"target": [
-						"list",
-						"detail"
-					]
+					"target": ["list", "detail"]
 				},
 				{
 					"pattern": "detail/{product}/{layout}",
 					"name": "detail",
-					"target": [
-						"list",
-						"detail"
-					]
+					"target": ["list", "detail"]
 				},
 				{
 					"pattern": "cart/{layout}",
 					"name": "cart",
-					"target": [
-					  "list",
-					  "detail",
-					  "cart"
-					]
-				  }
+					"target": ["list", "detail", "cart"]
+				}
 			],
 			"targets": {
 				"list": {
@@ -77,7 +65,7 @@
 				"cart": {
 					"name": "Cart",
 					"controlAggregation": "endColumnPages"
-				  }
+				}
 			}
 		}
 	}

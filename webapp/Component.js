@@ -15,20 +15,22 @@ sap.ui.define([
 			var oModel,
 				oProductsModel,
 				oRouter;
+
 			// Initialize Cart Model
 			var oCartModel = new sap.ui.model.json.JSONModel({
 				cartItems: [],
-				cartCount: 0
+				cartCount: 0,
+				totalPrice: 0 
 			});
 			this.setModel(oCartModel, "cartModel");
 
 			UIComponent.prototype.init.apply(this, arguments);
 			// Component.js or App.controller.js
-var oAppViewModel = new sap.ui.model.json.JSONModel({
-	layout: "OneColumn",
-	smallScreenMode: false
-});
-this.setModel(oAppViewModel, "appView");
+			var oAppViewModel = new sap.ui.model.json.JSONModel({
+				layout: "OneColumn",
+				smallScreenMode: false
+			});
+			this.setModel(oAppViewModel, "appView");
 
 			// create the cart model
 			var oCartModel = new JSONModel({
